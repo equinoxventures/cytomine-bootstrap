@@ -23,9 +23,9 @@ http://www.littlebigextra.com/how-to-fix-pkix-path-building-failed-sun-security-
 $ sudo apt install openjdk-11-jre-headless
 $ keytool -export -keystore keystore.jks -alias selfsigned -file selfsigned.crt
 
-sudo docker cp selfsigned.crt ims:/tmp/key
+sudo docker cp selfsigned.crt ims:/tmp/
 # docker exec -it ims /bin/bash
-# keytool -importcert -file selfsigned.crt -alias selfsigned -keystore /usr/local/openjdk-8/jre/lib/security/
+# keytool -importcert -file selfsigned.crt -alias selfsigned -keystore /usr/local/openjdk-8/jre/lib/security/cacerts
 
 password: changeit
 
