@@ -94,6 +94,7 @@ http {
         }
     }
     server {
+        listen 80;
         client_max_body_size 0;
         listen       443 ssl;
         server_name  $IMS_URL1;
@@ -109,6 +110,7 @@ http {
         }
     }
     server {
+        listen 80;
         client_max_body_size 0;
         listen       443 ssl;
         server_name  $IMS_URL2;
