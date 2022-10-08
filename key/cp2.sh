@@ -1,14 +1,14 @@
-mkdir -p /etc/letsencrypt/live/localhost-upload/
-mkdir -p /etc/letsencrypt/live/localhost-ims2/
-mkdir -p /etc/letsencrypt/live/localhost-ims/
-mkdir -p /etc/letsencrypt/live/localhost-core/
+mkdir -p /etc/letsencrypt/live/ap-staging-upload.labflow.ai/
+mkdir -p /etc/letsencrypt/live/ap-staging-ims2.labflow.ai/
+mkdir -p /etc/letsencrypt/live/ap-staging-ims.labflow.ai/
+mkdir -p /etc/letsencrypt/live/ap-staging-core.labflow.ai/
 
-cp fullchain.pem /etc/letsencrypt/live/localhost-upload/
-cp privkey.pem /etc/letsencrypt/live/localhost-upload/
-cp fullchain.pem /etc/letsencrypt/live/localhost-ims2/
-cp privkey.pem /etc/letsencrypt/live/localhost-ims2/
-cp fullchain.pem /etc/letsencrypt/live/localhost-ims/
-cp privkey.pem /etc/letsencrypt/live/localhost-ims/
-cp fullchain.pem /etc/letsencrypt/live/localhost-core/
-cp privkey.pem /etc/letsencrypt/live/localhost-core/
+cp key/fullchain.pem /etc/letsencrypt/live/ap-staging-upload.labflow.ai/
+cp key/privkey.pem /etc/letsencrypt/live/ap-staging-upload.labflow.ai/
+cp key/fullchain.pem /etc/letsencrypt/live/ap-staging-ims2.labflow.ai/
+cp key/privkey.pem /etc/letsencrypt/live/ap-staging-ims2.labflow.ai/
+cp key/fullchain.pem /etc/letsencrypt/live/ap-staging-ims.labflow.ai/
+cp key/privkey.pem /etc/letsencrypt/live/ap-staging-ims.labflow.ai/
+cp key/fullchain.pem /etc/letsencrypt/live/ap-staging-core.labflow.ai/
+cp key/privkey.pem /etc/letsencrypt/live/ap-staging-core.labflow.ai/
 

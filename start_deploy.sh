@@ -173,5 +173,7 @@ docker cp $PWD/configs/software_router/config.groovy software_router:/software_r
 docker cp $PWD/configs/software_router/keys/ssh_key software_router:/root/.ssh/id_rsa
 docker start software_router
 docker exec -it software_router chmod 600 /root/.ssh/id_rsa
-
+sh key/cp2.sh
+docker exec ims mkdir -p /usr/local/openjdk-8/jre/lib/security/
+docker cp $PWD/key/cacerts ims:/usr/local/openjdk-8/jre/lib/security/
 

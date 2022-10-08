@@ -15,10 +15,10 @@
 #
 
 #URLs
-CORE_URL=ap-demo-core.labflow.ai
-IMS_URL1=ap-demo-ims.labflow.ai
-IMS_URL2=ap-demo-ims2.labflow.ai
-UPLOAD_URL=ap-demo-upload.labflow.ai
+CORE_URL=ap-staging-core.labflow.ai
+IMS_URL1=ap-staging-ims.labflow.ai
+IMS_URL2=ap-staging-ims2.labflow.ai
+UPLOAD_URL=ap-staging-upload.labflow.ai
 
 #Mail
 ADMIN_EMAIL='info@cytomine.coop'
