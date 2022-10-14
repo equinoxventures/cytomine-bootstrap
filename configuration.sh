@@ -21,17 +21,19 @@ IMS_URL2=ap-demo-ims2.labflow.ai
 UPLOAD_URL=ap-demo-upload.labflow.ai
 
 #Mail
-ADMIN_EMAIL='info@cytomine.coop'
+ADMIN_EMAIL='ben@labflow.ai'
 # SENDER_EMAIL, SENDER_EMAIL_PASS, SENDER_EMAIL_SMTP : email params of the sending account
-SENDER_EMAIL_PASS='passwd'
-SENDER_EMAIL_SMTP_HOST='smtp.gmail.com'
+SENDER_EMAIL_PASS='dfcbba6c-9b30-4147-9509-52f8e1f60d09'
+SENDER_EMAIL_SMTP_HOST='smpt.postmarkapp.com'
 SENDER_EMAIL_SMTP_PORT='587'
-SENDER_EMAIL='your.email@gmail.com'
+SENDER_EMAIL='noreply@labflow.ai'
 # RECEIVER_EMAIL : email adress of the receiver
-RECEIVER_EMAIL='receiver@XXX.com'
+RECEIVER_EMAIL='backup@labflow.ai'
+
+
 
 #Mail
-ADMIN_EMAIL='info@cytomine.coop'
+ADMIN_EMAIL='ben@labflow.ai'
 
 #Paths
 IMS_STORAGE_PATH=/data/images
