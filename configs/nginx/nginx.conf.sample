@@ -44,7 +44,7 @@ http {
     large_client_header_buffers 4 16k;
 
     server {
-        listen 80 default_server;
+        #listen 80 default_server;
         client_max_body_size 0;
         listen       443 ssl;
         server_name  $CORE_URL;
