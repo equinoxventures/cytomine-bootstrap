@@ -16,14 +16,14 @@ cytomine.customUI.global = [
 ]
 
 
-grails.serverURL='http://$CORE_URL'
-grails.imageServerURL=['http://$IMS_URL1','http://$IMS_URL2']
-grails.uploadURL='http://$UPLOAD_URL'
+grails.serverURL='https://$CORE_URL'
+grails.imageServerURL=['https://$IMS_URL1','https://$IMS_URL2']
+grails.uploadURL='https://$UPLOAD_URL'
 
 storage_buffer='$IMS_BUFFER_PATH'
 storage_path='$IMS_STORAGE_PATH'
 
-grails.adminPassword='$ADMIN_PWD'
+grails.adminPassword='5e2cc076-bb90-4ee2-a50f-69a837f2ce9e'
 grails.adminPrivateKey='$ADMIN_PRIV_KEY'
 grails.adminPublicKey='$ADMIN_PUB_KEY'
 grails.superAdminPrivateKey='$SUPERADMIN_PRIV_KEY'
