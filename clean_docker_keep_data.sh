@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #
 # Copyright (c) 2009-2020. Authors: see NOTICE file.
 #
@@ -15,6 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+#docker stop -t 0 $(docker ps -aq)
 docker stop memcached
 docker rm -v memcached
 docker stop rabbitmq
