@@ -144,7 +144,7 @@ docker start core
 docker create --name web_UI \
 -v /etc/localtime:/etc/localtime \
 --restart=unless-stopped \
-cytomine/web_ui:v1.4.0 > /dev/null
+seapapa/web_ui:v0.0.2 > /dev/null
 
 docker cp "${PWD}/configs/web_ui/configuration.json" web_UI:/app/configuration.json
 docker cp "${PWD}/configs/web_ui/nginx.conf" web_UI:/etc/nginx/nginx.conf
