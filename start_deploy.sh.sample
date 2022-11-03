@@ -21,7 +21,6 @@ while read LINE; do
     fi
 done <<< "$(cat configuration.sh)"
 if [ -e key/${ADDR[1]} ];then
-	bash key/${ADDR[1]}/cp.sh;else
 	echo "not found key/${ADDR[1]} dir"
 	exit
 fi
