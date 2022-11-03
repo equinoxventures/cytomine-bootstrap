@@ -20,7 +20,7 @@ while read LINE; do
         IFS='=' read -ra ADDR <<< "$LINE"
     fi
 done <<< "$(cat configuration.sh)"
-if [ -e key/${ADDR[1]} ];then
+if [ ! -e key/${ADDR[1]} ];then
 	echo "not found key/${ADDR[1]} dir"
 	exit
 fi
