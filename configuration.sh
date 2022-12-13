@@ -23,8 +23,9 @@ UPLOAD_URL=ap-demo-upload.labflow.ai
 #Mail
 ADMIN_EMAIL='ben@labflow.ai'
 # SENDER_EMAIL, SENDER_EMAIL_PASS, SENDER_EMAIL_SMTP : email params of the sending account
-SENDER_EMAIL_PASS='dfcbba6c-9b30-4147-9509-52f8e1f60d09'
-SENDER_EMAIL_SMTP_HOST='smpt.postmarkapp.com'
+SENDER_EMAIL_USER='PM-B-broadcast-rugt-vbeDXrGvDcBew4MI'
+SENDER_EMAIL_PASS='IIoe0hU9SveUAL4MdH1uj7WYZc9q_BUYgMnk'
+SENDER_EMAIL_SMTP_HOST='smtp-broadcasts.postmarkapp.com'
 SENDER_EMAIL_SMTP_PORT='587'
 SENDER_EMAIL='noreply@labflow.ai'
 # RECEIVER_EMAIL : email adress of the receiver

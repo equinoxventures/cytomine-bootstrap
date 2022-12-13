@@ -132,7 +132,7 @@ docker create --name core \
 -v /etc/localtime:/etc/localtime \
 -v $UPLOADED_SOFTWARES_PATH:/data/softwares/code \
 --restart=unless-stopped \
-cytomine/core:v3.2.3 > /dev/null
+seapapa/core:latest > /dev/null
 
 docker cp $PWD/configs/core/cytomineconfig.groovy core:/usr/share/tomcat9/.grails/cytomineconfig.groovy
 docker cp $PWD/hosts/core/addHosts.sh core:/tmp/addHosts.sh
