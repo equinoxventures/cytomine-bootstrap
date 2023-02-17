@@ -69,6 +69,11 @@ http {
             proxy_set_header Host $host;
             proxy_pass http://core:8080;
         }
+        location /download {
+            alias /home;
+            allow all;
+            autoindex on;
+        }
         location /j_spring_security { # check and logout
             proxy_set_header X-Real-IP $remote_addr;
             proxy_set_header Host $host;
