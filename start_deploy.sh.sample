@@ -178,7 +178,7 @@ docker create --name software_router \
 --link rabbitmq:rabbitmq \
 --link slurm:slurm \
 --restart=unless-stopped \
-cytomine/software_router:v2.1.1 > /dev/null
+seapapa/software_router:v0.0.1 > /dev/null
 
 docker cp $PWD/hosts/software_router/addHosts.sh software_router:/tmp/addHosts.sh
 docker cp $PWD/configs/software_router/config.groovy software_router:/software_router/config.groovy
