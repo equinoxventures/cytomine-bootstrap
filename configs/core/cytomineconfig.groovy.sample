@@ -40,6 +40,9 @@ grails.notification.smtp.host='$SENDER_EMAIL_SMTP_HOST'
 grails.notification.smtp.port='$SENDER_EMAIL_SMTP_PORT'
 grails.admin.email='$ADMIN_EMAIL'
 
+grails.snapshot.username='$WEBHOOK_USERNAME'
+grails.snapshot.password='$WEBHOOK_PASSWORD'
+
 grails.mongo.host = 'mongodb'
 grails.mongo.options.connectionsPerHost=10
 grails.mongo.options.threadsAllowedToBlockForConnectionMultiplier=5

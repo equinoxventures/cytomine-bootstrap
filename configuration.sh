@@ -62,7 +62,8 @@ BIOFORMAT_ENABLED=true
 BIOFORMAT_ALIAS="bioformat"
 BIOFORMAT_PORT="4321"
 
-
+WEBHOOK_USERNAME="username"
+WEBHOOK_PASSWORD="password"
 
 #keys
 ADMIN_PWD=$(cat /proc/sys/kernel/random/uuid)
