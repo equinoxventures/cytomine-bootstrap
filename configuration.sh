@@ -34,9 +34,9 @@ RECEIVER_EMAIL='receiver@XXX.com'
 ADMIN_EMAIL='info@cytomine.coop'
 
 #Paths
-IMS_STORAGE_PATH=/data/images
-IMS_BUFFER_PATH=/data/images/_buffer
-UPLOADED_SOFTWARES_PATH=/data/softwares/code
+IMS_STORAGE_PATH=$DATA_DIR/data/images
+IMS_BUFFER_PATH=$DATA_DIR/data/images/_buffer
+UPLOADED_SOFTWARES_PATH=$DATA_DIR/data/softwares/code
 
 #middlewares
 RABBITMQ_LOGIN="router"
