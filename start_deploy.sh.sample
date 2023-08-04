@@ -34,6 +34,9 @@ docker start rabbitmq
 
 
 docker volume create --name postgis_data > /dev/null
+docker run --rm -v postgis_data:/data ubuntu chown -R root:root /data
+docker run --rm -v postgis_data:/data ubuntu chmod -R 777 /data
+
 # create database docker
 docker run -d -m 8g --name postgresql -v postgis_data:/var/lib/postgresql \
 --restart=unless-stopped \
