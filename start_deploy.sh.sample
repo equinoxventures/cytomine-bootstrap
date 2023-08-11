@@ -15,15 +15,15 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-while read LINE; do
-    if [[ $LINE == "CORE_URL="* ]]; then
-        IFS='=' read -ra ADDR <<< "$LINE"
-    fi
-done <<< "$(cat configuration.sh)"
-if [ ! -e key/${ADDR[1]} ];then
-	echo "not found key/${ADDR[1]} dir"
-	exit
-fi
+#while read LINE; do
+#    if [[ $LINE == "CORE_URL="* ]]; then
+#        IFS='=' read -ra ADDR <<< "$LINE"
+#    fi
+#done <<< "$(cat configuration.sh)"
+#if [ ! -e key/${ADDR[1]} ];then
+#	echo "not found key/${ADDR[1]} dir"
+#	exit
+#fi
 
 docker create --name memcached \
 --restart=unless-stopped \
@@ -155,13 +155,13 @@ docker create --name software_router \
 --link rabbitmq:rabbitmq \
 --link slurm:slurm \
 --restart=unless-stopped \
-seapapa/software_router:v0.0.1 > /dev/null
+cytomine/software_router:v2.1.0 > /dev/null
+#seapapa/software_router:v0.0.1 > /dev/null
 
 docker cp $PWD/hosts/software_router/addHosts.sh software_router:/tmp/addHosts.sh
 docker cp $PWD/configs/software_router/config.groovy software_router:/software_router/config.groovy
 docker cp $PWD/configs/software_router/keys/ssh_key software_router:/root/.ssh/id_rsa
 docker start software_router
-docker exec -it software_router chmod 600 /root/.ssh/id_rsa
-#docker exec ims mkdir -p /usr/local/openjdk-8/jre/lib/security/
-docker cp $PWD/key/${ADDR[1]}/cacerts ims:/usr/local/openjdk-8/jre/lib/security/
+#docker exec -it software_router chmod 600 /root/.ssh/id_rsa
+#docker cp $PWD/key/${ADDR[1]}/cacerts pims:/usr/local/openjdk-8/jre/lib/security/
 
