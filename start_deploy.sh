@@ -73,8 +73,8 @@ docker exec -it slurm chmod 600 /home/cytomine/.ssh/authorized_keys
 
 
 docker create --name bioformat \
--v $IMS_STORAGE_PATH:$IMS_STORAGE_PATH \
--e BIOFORMAT_PORT=$BIOFORMAT_PORT \
+-v /home/cjwayn/data/images:/data/images \
+-e BIOFORMAT_PORT=4321 \
 --restart=unless-stopped \
 cytomine/bioformat:v1.2.0 > /dev/null
 
@@ -83,9 +83,9 @@ docker start bioformat
 
 docker create --name pims \
 --link rabbitmq:rabbitmq \
--e WEB_CONCURRENCY="2" \
--v $IMS_STORAGE_PATH:$IMS_STORAGE_PATH \
--v $IMS_BUFFER_PATH:/tmp/uploaded \
+-e WEB_CONCURRENCY="20" \
+-v /home/cjwayn/data/images:/data/images \
+-v /home/cjwayn/data/images/_buffer:/tmp/uploaded \
 --restart=unless-stopped \
 cytomine/pims-and-plugins:v0.0.0 > /dev/null
 
@@ -99,7 +99,7 @@ docker create --name core \
 --link mongodb:mongodb \
 --link rabbitmq:rabbitmq \
 -v /etc/localtime:/etc/localtime \
--v $UPLOADED_SOFTWARES_PATH:/data/softwares/code \
+-v /home/cjwayn/data/softwares/code:/data/softwares/code \
 --restart=unless-stopped \
 seapapa/core:pims0.1 > /dev/null
 
@@ -123,7 +123,7 @@ docker create --name nginx \
 --link pims:pims \
 --link core:core \
 --link web_UI:web_UI \
--v $IMS_BUFFER_PATH:/tmp/uploaded \
+-v /home/cjwayn/data/images/_buffer:/tmp/uploaded \
 -p 80:80 \
 --restart=unless-stopped \
 cytomine/nginx:v1.4.0 > /dev/null

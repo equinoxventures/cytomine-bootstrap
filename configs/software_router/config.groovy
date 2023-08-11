@@ -1,11 +1,11 @@
 rabbitmq.host = "rabbitmq"
 rabbitmq.port = "5672"
-rabbitmq.username='$RABBITMQ_LOGIN'
-rabbitmq.password='$RABBITMQ_PASSWORD'
+rabbitmq.username='router'
+rabbitmq.password='router'
 
-cytomine.core.url='http://$CORE_URL'
-cytomine.core.publicKey='$RABBITMQ_PUB_KEY'
-cytomine.core.privateKey='$RABBITMQ_PRIV_KEY'
+cytomine.core.url='http://localhost-core'
+cytomine.core.publicKey='a00b27ba-d442-4ba5-8185-e98262da0f0c'
+cytomine.core.privateKey='34d4928a-0974-47aa-9f8d-86daa3cfe39b'
 
 cytomine.software.communication.exchange = "exchangeCommunication"
 cytomine.software.communication.queue = "queueCommunication"

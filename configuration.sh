@@ -15,26 +15,23 @@
 #
 
 #URLs
-CORE_URL=ap-demo-core.labflow.ai
-IMS_URL1=ap-demo-ims.labflow.ai
-IMS_URL2=ap-demo-ims2.labflow.ai
-UPLOAD_URL=ap-demo-upload.labflow.ai
+CORE_URL=localhost-core
+IMS_URL1=localhost-ims
+IMS_URL2=localhost-ims2
+UPLOAD_URL=localhost-upload
 
 #Mail
-ADMIN_EMAIL='ben@labflow.ai'
+ADMIN_EMAIL='info@cytomine.coop'
 # SENDER_EMAIL, SENDER_EMAIL_PASS, SENDER_EMAIL_SMTP : email params of the sending account
-SENDER_EMAIL_USER='PM-B-broadcast-rugt-vbeDXrGvDcBew4MI'
-SENDER_EMAIL_PASS='IIoe0hU9SveUAL4MdH1uj7WYZc9q_BUYgMnk'
-SENDER_EMAIL_SMTP_HOST='smtp-broadcasts.postmarkapp.com'
+SENDER_EMAIL_PASS='passwd'
+SENDER_EMAIL_SMTP_HOST='smtp.gmail.com'
 SENDER_EMAIL_SMTP_PORT='587'
-SENDER_EMAIL='noreply@labflow.ai'
+SENDER_EMAIL='your.email@gmail.com'
 # RECEIVER_EMAIL : email adress of the receiver
-RECEIVER_EMAIL='backup@labflow.ai'
-
-
+RECEIVER_EMAIL='receiver@XXX.com'
 
 #Mail
-ADMIN_EMAIL='ben@labflow.ai'
+ADMIN_EMAIL='info@cytomine.coop'
 
 #Paths
 IMS_STORAGE_PATH=/data/images
@@ -65,13 +62,13 @@ BIOFORMAT_PORT="4321"
 
 
 #keys
-ADMIN_PWD=$(cat /proc/sys/kernel/random/uuid)
+ADMIN_PWD='password'
 ADMIN_PUB_KEY=$(cat /proc/sys/kernel/random/uuid)
 ADMIN_PRIV_KEY=$(cat /proc/sys/kernel/random/uuid)
 SUPERADMIN_PUB_KEY=$(cat /proc/sys/kernel/random/uuid)
 SUPERADMIN_PRIV_KEY=$(cat /proc/sys/kernel/random/uuid)
 RABBITMQ_PUB_KEY=$(cat /proc/sys/kernel/random/uuid)
 RABBITMQ_PRIV_KEY=$(cat /proc/sys/kernel/random/uuid)
-IMS_PUB_KEY=$(cat /proc/sys/kernel/random/uuid)
-IMS_PRIV_KEY=$(cat /proc/sys/kernel/random/uuid)
+IMS_PUB_KEY="893452b9-e5e1-4c62-8b0a-d95858aefe6e"
+IMS_PRIV_KEY="59b3c026-10de-496c-9476-78d7d344ada8"
 SERVER_ID=$(cat /proc/sys/kernel/random/uuid)

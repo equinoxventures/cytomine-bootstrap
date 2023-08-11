@@ -1,8 +1,8 @@
-*.groovy
+# *.groovy
 *.swp
-configs/nginx/nginx.conf             
+# configs/nginx/nginx.conf             
 configs/nginx/nginxDev.conf          
 configs/web_ui/configuration.json    
 addHosts.sh               
-start_deploy.sh                      
+# start_deploy.sh                      
 

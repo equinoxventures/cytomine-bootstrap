@@ -16,14 +16,14 @@ cytomine.customUI.global = [
 ]
 
 
-grails.serverURL='https://$CORE_URL'
-grails.imageServerURL=['https://$IMS_URL1','https://$IMS_URL2']
-grails.uploadURL='https://$UPLOAD_URL'
+grails.serverURL='http://$CORE_URL'
+grails.imageServerURL=['http://$IMS_URL1','http://$IMS_URL2']
+grails.uploadURL='http://$UPLOAD_URL'
 
 storage_buffer='$IMS_BUFFER_PATH'
 storage_path='$IMS_STORAGE_PATH'
 
-grails.adminPassword='5e2cc076-bb90-4ee2-a50f-69a837f2ce9e'
+grails.adminPassword='$ADMIN_PWD'
 grails.adminPrivateKey='$ADMIN_PRIV_KEY'
 grails.adminPublicKey='$ADMIN_PUB_KEY'
 grails.superAdminPrivateKey='$SUPERADMIN_PRIV_KEY'
@@ -34,7 +34,6 @@ grails.rabbitMQPrivateKey='$RABBITMQ_PRIV_KEY'
 grails.rabbitMQPublicKey='$RABBITMQ_PUB_KEY'
 
 grails.notification.email='$SENDER_EMAIL'
-grails.notification.username='$SENDER_EMAIL_USER'
 grails.notification.password='$SENDER_EMAIL_PASS'
 grails.notification.smtp.host='$SENDER_EMAIL_SMTP_HOST'
 grails.notification.smtp.port='$SENDER_EMAIL_SMTP_PORT'
