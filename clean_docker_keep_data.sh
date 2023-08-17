@@ -15,29 +15,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-docker stop memcached
-docker rm -v memcached
-docker stop rabbitmq
-docker rm -v rabbitmq
-docker stop mongodb
-docker rm -v mongodb
-docker stop postgresql
-docker rm -v postgresql
-docker stop slurm
-docker rm -v slurm
-docker stop iipOff
-docker rm -v iipOff
-docker stop iipCyto
-docker rm -v iipCyto
-docker stop bioformat
-docker rm -v bioformat
-docker stop ims
-docker rm -v ims
-docker stop core
-docker rm -v core
-docker stop web_UI
-docker rm -v web_UI
-docker stop nginx
-docker rm -v nginx
-docker stop software_router
-docker rm -v software_router
+DOCKERS=(memcached rabbitmq mongodb postgresql slurm iipOff iipCyto bioformat ims core web_UI nginx software_router)
+
+for name in ${DOCKERS[@]}; do
+  (docker stop $name && docker rm -v $name && echo "Done removing $name") &
+done
+
+echo "Process started, please wait until all the containers are stopped and removed."
