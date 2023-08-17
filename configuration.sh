@@ -63,13 +63,13 @@ BIOFORMAT_PORT="4321"
 
 
 #keys
-ADMIN_PWD=$(cat /proc/sys/kernel/random/uuid)
-ADMIN_PUB_KEY=$(cat /proc/sys/kernel/random/uuid)
-ADMIN_PRIV_KEY=$(cat /proc/sys/kernel/random/uuid)
-SUPERADMIN_PUB_KEY=$(cat /proc/sys/kernel/random/uuid)
-SUPERADMIN_PRIV_KEY=$(cat /proc/sys/kernel/random/uuid)
-RABBITMQ_PUB_KEY=$(cat /proc/sys/kernel/random/uuid)
-RABBITMQ_PRIV_KEY=$(cat /proc/sys/kernel/random/uuid)
-IMS_PUB_KEY=$(cat /proc/sys/kernel/random/uuid)
-IMS_PRIV_KEY=$(cat /proc/sys/kernel/random/uuid)
-SERVER_ID=$(cat /proc/sys/kernel/random/uuid)
+ADMIN_PWD=$(uuidgen)
+ADMIN_PUB_KEY=$(uuidgen)
+ADMIN_PRIV_KEY=$(uuidgen)
+SUPERADMIN_PUB_KEY=$(uuidgen)
+SUPERADMIN_PRIV_KEY=$(uuidgen)
+RABBITMQ_PUB_KEY=$(uuidgen)
+RABBITMQ_PRIV_KEY=$(uuidgen)
+IMS_PUB_KEY=$(uuidgen)
+IMS_PRIV_KEY=$(uuidgen)
+SERVER_ID=$(uuidgen)
