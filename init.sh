@@ -35,7 +35,16 @@ for i in ${FILES[@]}; do
         cp $i.sample $i
 
         for j in ${VARIABLES[@]}; do
-            eval sed -i "s~\\\$$j~\$$j~g" $i
+            echo "----"
+            echo "File: ${i}"
+            echo "Variable: ${j}"
+            # set the VALUE variable to the actual value of the variable named $j, from the configuration file
+            # e.g. VALUE=CORE_URL
+            eval "VALUE=\$$j"
+            echo "Value: ${VALUE}"
+            # insert that value into the file, replacing e.g. $CORE_URL with localhost-core
+            sed -i "" "s~\\\$$j~${VALUE}~g" $i
+            echo "----"
         done
     fi
 done
